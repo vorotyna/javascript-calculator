@@ -31,10 +31,37 @@ body {
   cursor: pointer;
 }
 
+.calc-button:hover {
+  background-color: #ebebeb;
+}
+
+.calc-button:active {
+  background-color: #bbbcbe;
+}
+
+.calc-button:last-child {
+  background-color: #df974c;
+  color: white;
+}
+
+.calc-button:last-child:hover {
+  background-color: #dfb07e;
+}
+
+.calc-button:last-child:active {
+  background-color: #dd8d37;
+}
+
 .double {
-  width: 49%;
+  width: 49.7%;
 }
 
 .triple {
-  width: 73.5%;
+  width: 74.8%;
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5%;
 }
