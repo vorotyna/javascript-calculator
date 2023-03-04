@@ -44,3 +44,10 @@ function handleSymbol(value) {
   }
 }
 
+function handleNumber(value) {
+  if (buffer === "0") {
+    buffer = value;
+  } else {
+    buffer += value;
+  }
+}
