@@ -15,8 +15,26 @@ body {
 
 .screen {
   color: white;
-  text-align: end;
+  text-align: right;
   font-size: 40px;
   font-family: "Courier New", Courier, monospace;
   padding: 20px 5px;
+}
+
+.calc-button {
+  background-color: #d8d9db;
+  color: black;
+  height: 100px;
+  width: 24.5%;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.double {
+  width: 49%;
+}
+
+.triple {
+  width: 73.5%;
 }
