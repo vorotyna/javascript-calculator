@@ -51,3 +51,7 @@ function handleNumber(value) {
     buffer += value;
   }
 }
+
+function rerender() {
+  screen.innerText = buffer;
+}
