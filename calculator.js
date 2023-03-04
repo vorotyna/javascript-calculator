@@ -55,3 +55,13 @@ function handleNumber(value) {
 function rerender() {
   screen.innerText = buffer;
 }
+
+function showScreenChanges() {
+  document
+    .querySelector(".calculator-buttons")
+    .addEventListener("click", function(event) {
+      buttonClick(event.target.innerText);
+    });
+}
+
+showScreenChanges();
