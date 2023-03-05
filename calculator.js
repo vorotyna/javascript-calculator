@@ -31,7 +31,7 @@ function handleSymbol(value) {
       } else {
         handleOperation(parseInt(buffer));
         previousOperator = null;
-        buffer += runningTotal;
+        buffer = +runningTotal;
         runningTotal = 0;
       }
       break;
@@ -50,6 +50,35 @@ function handleNumber(value) {
   } else {
     buffer += value;
   }
+}
+
+function handleOperation(integerBuffer) {
+  if (previousOperator === "+") {
+    runningTotal += integerBuffer;
+  } else if (previousOperator === "-") {
+    runningTotal -= integerBuffer;
+  } else if (previousOperator === "×") {
+    runningTotal *= integerBuffer;
+  } else {
+    runningTotal /= integerBuffer;
+  }
+}
+
+function handleMath(value) {
+  if (buffer === "0") {
+    return;
+  }
+
+  const integerBuffer = parseInt(buffer);
+  if (runningTotal === 0) {
+    runningTotal = integerBuffer;
+  } else {
+    handleOperation(integerBuffer);
+  }
+
+  previousOperator = value;
+
+  buffer = "0";
 }
 
 function rerender() {
